@@ -4,7 +4,7 @@
   tasks:
 
   - name: Run a pwsh command
-    shell: sh vminfo.ps1
+    shell: vminfo.ps1
    # args:
     #  executable: /usr/bin/pwsh
     #register: result
