@@ -4,7 +4,7 @@
   tasks:
 
   - name: Run a pwsh command
-    script: date.sh
+    shell: date.sh
    # args:
     #  executable: /usr/bin/pwsh
     #register: result
