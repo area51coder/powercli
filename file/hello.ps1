@@ -1,3 +1,4 @@
+#!/usr/bin/pwsh -Command
 # Filename: helloworld.ps1
 Write-Host
 Write-Host 'Hello World!'
