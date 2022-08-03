@@ -1,4 +1,4 @@
-!/usr/bin/pwsh -Command
+#!/usr/bin/pwsh -Command
 write-host -fore Green "executing PowerShell!";
 #$Server = 192.168.29.195
 #$Credential = Get-Credential Administrator@vsphere.local
