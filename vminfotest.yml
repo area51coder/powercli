@@ -3,8 +3,8 @@
   gather_facts: True
   tasks:
 
-  - name: Run a pwsh command
-    script: vminfo.ps1
+  - command: pwsh vminfo.ps1
+ #   script: vminfo.ps1
    # args:
     #  executable: /usr/bin/pwsh
     #register: result
