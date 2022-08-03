@@ -3,4 +3,5 @@
 Write-Host
 Write-Host 'Hello World!'
 Write-Host "Good-bye World! `n"
+Connect-VIServer 192.168.29.195 -User Administrator@vsphere.local -Password B@ond007
 # end of script
