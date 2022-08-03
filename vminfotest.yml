@@ -5,6 +5,6 @@
 
   - name: Run a pwsh command
     script: vminfo.ps1
-    args:
-      executable: /usr/bin/pwsh
-    register: result
+   # args:
+    #  executable: /usr/bin/pwsh
+    #register: result
