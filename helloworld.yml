@@ -6,4 +6,4 @@
   gather_facts: false
   tasks:
     - name: Run powershell script
-      command: pwsh hello.ps1
+      script: hello.ps1
