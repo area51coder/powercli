@@ -4,6 +4,6 @@
 
   tasks:
     - name : Return motd to registered var
-      ansible.builtin.shell: pwsh "/work/vminfo.ps1"
+      ansible.builtin.shell: pwsh "vminfo.ps1"
     #  path: /work
 #     register: output
