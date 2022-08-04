@@ -28,4 +28,4 @@ $VmInfo = ForEach ($Datacenter in (Get-Datacenter | Sort-Object -Property Name))
     }
   }
 }
-$VmInfo | Export-Csv -NoTypeInformation -UseCulture -Path "VmInfo.csv"
+$VmInfo | Export-Csv -NoTypeInformation -UseCulture -Path "file/VmInfo.csv"
