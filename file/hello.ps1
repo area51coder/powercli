@@ -1,5 +1,11 @@
 #!/usr/bin/pwsh -Command
 # Filename: helloworld.ps1
+set-psrepository -name "PSGallery" -InstallationPolicy Trusted
+Install-Module -Name VMware.PowerCLI -Scope CurrentUser
+import-module vmware.vimautomation.core
+import-module vmware.vimautomation.sdk
+Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $false -Confirm:$false
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
 Write-Host
 Write-Host 'Hello World!'
 Write-Host "Good-bye World! `n"
