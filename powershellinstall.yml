@@ -3,7 +3,7 @@
 - name: Playbook for cmd poweshell
   hosts: localhost
 
-  tasks:
+tasks:
 - name: Checking For PowerCLI Module
   shell: pwsh Import-Module -Name VMware.PowerCLI
   register: _powercli_module
