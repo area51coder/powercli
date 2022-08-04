@@ -5,7 +5,7 @@
 
   tasks:
     - name: Checking For PowerCLI Module
-      shell: pwsh Import-Module -Name VMware.PowerCLI
+      shell: pwsh -Command Import-Module -Name VMware.PowerCLI
       register: _powercli_module
       failed_when: false
       changed_when: false
