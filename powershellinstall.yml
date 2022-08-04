@@ -4,8 +4,8 @@
   hosts: localhost
 
   tasks:
-    - name: Checking For PowerCLI Module
-      shell: pwsh -Command Install-Module "VMware.PowerCLI" -Scope "AllUsers" -AllowClobber -Force
+ #   - name: Checking For PowerCLI Module
+ #shell: pwsh -Command Install-Module "VMware.PowerCLI" -Scope "AllUsers" -AllowClobber -Force
     - name: Checking For PowerCLI Module
       shell: pwsh -Command Import-Module -Name VMware.PowerCLI
       register: _powercli_module
