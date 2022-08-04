@@ -14,5 +14,5 @@
     - name: Disable Invalid Cert Warning For PowerCLI
       shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -InvalidCertificateAction ignore
       #when: windows_powercli_disable_invalid_cert_warning
-    - name: Disable Invalid Cert Warning For PowerCLI
-      shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $true
+   # - name: Disable Invalid Cert Warning For PowerCLI
+    #  shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $true
