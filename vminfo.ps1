@@ -5,7 +5,7 @@ write-host -fore Green "executing PowerShell!";
 #$Credential = Get-Credential Administrator@vsphere.local
 #$Credential.Password | ConvertFrom-SecureString | Set-Content B@ond007
 #Connect-VIServer $Server -Credential $Credential
-Connect-VIServer 192.168.29.195 -User Administrator@vsphere.local -Password B@ond007
+pwsh -NoExit -Command Connect-VIServer 192.168.29.195 -User Administrator@vsphere.local -Password B@ond007
 $VmInfo = ForEach ($Datacenter in (Get-Datacenter | Sort-Object -Property Name)) {
   ForEach ($Cluster in ($Datacenter | Get-Cluster | Sort-Object -Property Name)) {
     ForEach ($VM in ($Cluster | Get-VM | Sort-Object -Property Name)) {
