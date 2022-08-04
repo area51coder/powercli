@@ -5,6 +5,8 @@
 
   tasks:
     - name: Checking For PowerCLI Module
+      shell: pwsh -Command Find-Module "VMware.PowerCLI" | Install-Module -Scope "AllUsers" -AllowClobber
+    - name: Checking For PowerCLI Module
       shell: pwsh -Command Import-Module -Name VMware.PowerCLI
       register: _powercli_module
       failed_when: false
