@@ -3,20 +3,10 @@
 - name: Playbook for cmd poweshell
   hosts: localhost
 
-tasks:
-  - name: Checking For PowerCLI Module
-    shell: pwsh Import-Module -Name VMware.PowerCLI
-    register: _powercli_module
-    failed_when: false
-    changed_when: false
+  tasks:
+    - name: Checking For PowerCLI Module
+      shell: pwsh Import-Module -Name VMware.PowerCLI
+      register: _powercli_module
+      failed_when: false
+      changed_when: false
 
-  - name: Install PowerCLI Module
-    shell: pwsh Install-Module -Name VMware.PowerCLI –Force
-    when: _powercli_module['rc'] != 0
-
-  - name: Disable Invalid Cert Warning For PowerCLI
-    shell: pwsh Set-PowerCLIConfiguration -InvalidCertificateAction ignore -confirm:$false
-    when: windows_powercli_disable_invalid_cert_warning
-
-  - name: Manage PowerCLI Customer Experience Improvement Program
-    shell: pwsh "Set-PowerCLIConfiguration -ParticipateInCeip ${{ window_powercli_customer_experience_improvement_program|lower }} -confirm:$false"
