@@ -8,4 +8,4 @@
 pwsh -NoExit -Command Connect-VIServer 192.168.29.195 -User Administrator@vsphere.local -Password B@ond007
 #pwsh -Command Start-Sleep -Seconds 30
 #pwsh -NoExit -Command Connect-VIServer 192.168.29.195 -User Administrator@vsphere.local -Password B@ond007
-.\vminfotest.ps1
+.\vminfocollect.ps1
