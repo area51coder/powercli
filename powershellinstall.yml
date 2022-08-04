@@ -12,5 +12,5 @@
       failed_when: false
       changed_when: false
     - name: Disable Invalid Cert Warning For PowerCLI
-      shell: pwsh -Command Set-PowerCLIConfiguration -InvalidCertificateAction ignore -confirm:$false
+      shell: pwsh -Command Set-PowerCLIConfiguration -InvalidCertificateAction ignore -Force
       #when: windows_powercli_disable_invalid_cert_warning
