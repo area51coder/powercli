@@ -3,8 +3,12 @@
   hosts: localhost
 
   tasks:
-    - name : Return motd to registered var
+    - name : import module and connect VI-server
       shell: pwsh vminfo.ps1
+      
+  tasks:
+    - name : collect info
+      shell: pwsh collect.ps1
     #  args:
      # executable: /usr/bin/pwsh
    # register: result
