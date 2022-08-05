@@ -17,6 +17,6 @@
    # - name: Disable Invalid Cert Warning For PowerCLI
     #  shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $true
     - name: Disable Invalid Cert Warning For PowerCLI
-      shell: vminfo.ps1
+      script: vminfo.ps1
       args:
         executable: /usr/bin/pwsh
