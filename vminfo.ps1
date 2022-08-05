@@ -9,6 +9,17 @@
 #pwsh -Command Start-Sleep -Seconds 30
 Connect-VIServer 192.168.29.195 -User Administrator@vsphere.local -Password B@ond007
 #.\vminfocollect.ps1
+$log_to_logfile = $true                     # Always generate log file
+$localfolder = Get-Location
+$logdir = "$localfolder\$computer-log"
+#$logspath = $logdir+"\"
+if (test-path $logdir){
+    Remove-Item -Recurse $logdir
+    mkdir $logdir | Out-Null
+}
+else{
+    mkdir $logdir | Out-Null
+}
 $VmInfo = ForEach ($Datacenter in (Get-Datacenter | Sort-Object -Property Name)) {
   ForEach ($Cluster in ($Datacenter | Get-Cluster | Sort-Object -Property Name)) {
     ForEach ($VM in ($Cluster | Get-VM | Sort-Object -Property Name)) {
