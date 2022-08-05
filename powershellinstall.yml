@@ -13,12 +13,6 @@
       changed_when: false
     - name: Disable Invalid Cert Warning For PowerCLI
       shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -InvalidCertificateAction ignore
-      when: windows_powercli_disable_invalid_cert_warning
-   # - name: Disable Invalid Cert Warning For PowerCLI
-    #  shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $true
-    - name: Checking For PowerCLI Module
-      shell: pwsh "Set-PowerCLIConfiguration -ParticipateInCeip ${{ window_powercli_customer_experience_improvement_program|lower }} -confirm:$false"
-           
     - name: PS1 file execution
       script: vminfo.ps1
       args:
