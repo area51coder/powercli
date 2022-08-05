@@ -20,3 +20,4 @@
       script: vminfo.ps1
       args:
         executable: /usr/bin/pwsh
+      register: output  
