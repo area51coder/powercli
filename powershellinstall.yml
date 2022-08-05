@@ -14,7 +14,7 @@
     - name: Disable Invalid Cert Warning For PowerCLI
       shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -InvalidCertificateAction ignore
     - name: PS1 file execution
-      script: vminfo.ps1
+      command: pwsh vminfo.ps1
       args:
         executable: /usr/bin/pwsh
       register: output 
