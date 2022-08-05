@@ -15,6 +15,8 @@
       shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -InvalidCertificateAction ignore
     - name: PS1 file execution
       command: pwsh vminfo.ps1
-      args:
-        executable: /usr/bin/pwsh
+      ignore_errors: yes
+      changed_when: false
+    #  args:
+        #executable: /usr/bin/pwsh
       register: output 
