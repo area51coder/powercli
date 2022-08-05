@@ -16,8 +16,12 @@
       #when: windows_powercli_disable_invalid_cert_warning
    # - name: Disable Invalid Cert Warning For PowerCLI
     #  shell: echo Y | pwsh -Command Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $true
+     - name: Checking For PowerCLI Module
+      shell: pwsh -Command Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $true
+      register: _powercli_module
+           
     - name: Disable Invalid Cert Warning For PowerCLI
       script: vminfo.ps1
       args:
         executable: /usr/bin/pwsh
-      register: output  
+      register: output 
